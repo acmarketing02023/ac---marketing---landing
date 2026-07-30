@@ -71,7 +71,7 @@ if (preferredDay) preferredDay.min = new Date().toISOString().split('T')[0];
 // NOTE: this endpoint + secret are configured for local dev. Once both
 // sites are deployed, swap CRM_LEADS_ENDPOINT for the production CRM URL,
 // and set LANDING_PAGE_ORIGIN on the CRM side to this site's real origin.
-const CRM_LEADS_ENDPOINT = 'http://localhost:3000/api/leads/inbound';
+const CRM_LEADS_ENDPOINT = 'https://setter-crm-kappa.vercel.app/api/leads/inbound';
 const CRM_WEBHOOK_SECRET = '0bf0af92295794c8f1d1a99698cf5fa78d7bd4e1b13f5821';
 
 const bookForm = document.querySelector('.book-form');

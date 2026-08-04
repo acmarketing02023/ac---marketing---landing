@@ -571,7 +571,6 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
   gap: 12px;
   flex-grow: 1;
-  max-height: 320px;
 }
 .lead-form-image {
   flex: 1;

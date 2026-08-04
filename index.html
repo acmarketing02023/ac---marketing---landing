@@ -33,20 +33,56 @@
   <!-- ── HERO ── -->
   <section class="hero" id="top">
     <div class="hero-content">
-      <div class="hero-grid">
-        <div class="hero-headline">
-          <h1 class="hero-title">
-            <span class="line line-big">Let's Fill</span>
-            <span class="line line-thin">Your Schedule.</span>
-          </h1>
-        </div>
-        <div class="hero-info">
-          <p class="hero-tag"><span>01</span> Performance Marketing — Contractors</p>
-          <p class="hero-sub">AC Marketing helps contractor businesses get more calls, more leads, and more booked jobs through paid ads, websites, and content. Got questions? Check the FAQs below — or skip straight to booking a free call.</p>
-          <div class="hero-btns">
-            <a href="#book" class="btn">Book a Free Call</a>
-            <a href="#faq" class="btn-outline">See FAQs</a>
-          </div>
+      <div class="hero-inner">
+        <p class="hero-question">Struggling to Keep Your Crew Busy?</p>
+
+        <h1 class="hero-main-offer">
+          <span class="offer-highlight">DOUBLE YOUR MONTHLY BOOKED JOBS IN 90 DAYS</span>
+          <span class="offer-subtext">OR YOUR MONEY BACK.</span>
+        </h1>
+
+        <div class="hero-divider"></div>
+
+        <p class="hero-cta-text">↓ See If You Qualify Below ↓</p>
+
+        <div class="hero-form-wrapper">
+          <form
+            class="hero-form"
+            name="booking"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/thank-you.html"
+          >
+            <input type="hidden" name="form-name" value="booking" />
+            <p class="hidden-field">
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="hero-form-row">
+              <input type="text" name="name" placeholder="Full Name" required />
+              <input type="tel" name="phone" placeholder="Phone" required />
+            </div>
+
+            <div class="hero-form-row">
+              <input type="email" name="email" placeholder="Email" required />
+              <input type="text" name="niche" placeholder="What area are you based in?" required />
+            </div>
+
+            <div class="hero-form-row">
+              <input type="text" name="niche" placeholder="What services does your company provide?" required />
+              <input type="text" placeholder="Current Average Monthly Revenue?" required />
+            </div>
+
+            <input type="text" placeholder="Are you currently ready to make an investment into your business?" required />
+
+            <label class="hero-checkbox">
+              <input type="checkbox" required />
+              <span>I agree to terms & conditions provided by the company. By providing my phone number, I agree to receive text messages from the business.</span>
+            </label>
+
+            <button type="submit" class="btn btn-submit">SUBMIT</button>
+          </form>
         </div>
       </div>
     </div>

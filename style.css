@@ -457,9 +457,10 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 8px;
 }
 
-/* ── ZOOM TESTIMONIAL (Box 1) ── */
+/* ── ZOOM TESTIMONIAL (Box 1 - Top Left) ── */
 .zoom-testimonial {
   grid-column: 1;
+  grid-row: 1;
 }
 .zoom-testimonial .testimonial-video {
   position: relative;
@@ -503,10 +504,10 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
 }
 
-/* ── MESSAGES TESTIMONIAL (Box 2) ── */
+/* ── MESSAGES TESTIMONIAL (Box 3 - Bottom Left) ── */
 .messages-testimonial {
-  grid-column: 2;
-  grid-row: 1;
+  grid-column: 1;
+  grid-row: 2;
 }
 .messages-container {
   display: flex;
@@ -532,10 +533,10 @@ a { color: inherit; text-decoration: none; }
   margin: 0;
 }
 
-/* ── WEBSITES TESTIMONIAL (Box 3) ── */
+/* ── WEBSITES TESTIMONIAL (Box 2 - Top Right) ── */
 .websites-testimonial {
-  grid-column: 1;
-  grid-row: 2;
+  grid-column: 2;
+  grid-row: 1;
 }
 .websites-gallery {
   display: grid;
@@ -560,7 +561,7 @@ a { color: inherit; text-decoration: none; }
   cursor: pointer;
 }
 
-/* ── LEADS TESTIMONIAL (Box 4) ── */
+/* ── LEADS TESTIMONIAL (Box 4 - Bottom Right) ── */
 .leads-testimonial {
   grid-column: 2;
   grid-row: 2;

@@ -428,7 +428,9 @@ a { color: inherit; text-decoration: none; }
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
   gap: 32px;
+  align-items: start;
 }
 .testimonial {
   display: flex;
@@ -439,7 +441,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: 8px;
   padding: 24px;
   transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-  min-height: 480px;
+  height: 100%;
 }
 .testimonial:hover {
   border-color: var(--rust);
@@ -588,12 +590,12 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
   gap: 12px;
   flex-grow: 1;
-  overflow: hidden;
+  min-height: 300px;
 }
 .lead-form-image {
   flex: 1;
   width: 100%;
-  height: 100%;
+  max-height: 200px;
   object-fit: cover;
   border: 1px solid var(--line-dark);
   border-radius: 6px;

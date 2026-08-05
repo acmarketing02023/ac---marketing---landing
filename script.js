@@ -65,24 +65,22 @@ faqItems.forEach(item => {
 const preferredDay = document.getElementById('preferred_day');
 if (preferredDay) preferredDay.min = new Date().toISOString().split('T')[0];
 
-// ── BOOKING FORM: PUSH LEAD INTO THE CRM ──
+// ── BOOKING FORMS: PUSH LEADS INTO THE CRM ──
 // In addition to the normal Netlify Forms submission, we relay the same
 // data to the Setter CRM so it shows up as a booking immediately.
-// NOTE: this endpoint + secret are configured for local dev. Once both
-// sites are deployed, swap CRM_LEADS_ENDPOINT for the production CRM URL,
-// and set LANDING_PAGE_ORIGIN on the CRM side to this site's real origin.
 const CRM_LEADS_ENDPOINT = 'https://setter-crm-kappa.vercel.app/api/leads/inbound';
 const CRM_WEBHOOK_SECRET = '0bf0af92295794c8f1d1a99698cf5fa78d7bd4e1b13f5821';
 
-const bookForm = document.querySelector('.book-form');
-if (bookForm) {
-  bookForm.addEventListener('submit', (e) => {
+function setupFormSubmission(formSelector) {
+  const form = document.querySelector(formSelector);
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const formData = new FormData(bookForm);
+    const formData = new FormData(form);
 
     // Honeypot: if the hidden bot-field got filled in, silently drop the
-    // submission (don't hit Netlify or the CRM) but still show the
-    // thank-you page so the bot doesn't learn anything changed.
+    // submission but still show the thank-you page
     if (formData.get('bot-field')) {
       window.location.href = '/thank-you.html';
       return;
@@ -110,3 +108,7 @@ if (bookForm) {
     });
   });
 }
+
+// Handle both hero form and booking form
+setupFormSubmission('.hero-form');
+setupFormSubmission('.book-form');

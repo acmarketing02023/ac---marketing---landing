@@ -61,9 +61,10 @@ faqItems.forEach(item => {
   });
 });
 
-// ── BOOKING FORM: MIN DATE = TODAY ──
-const preferredDay = document.getElementById('preferred_day');
-if (preferredDay) preferredDay.min = new Date().toISOString().split('T')[0];
+// ── SET MIN DATE = TODAY for all date inputs ──
+document.querySelectorAll('input[type="date"]').forEach(dateInput => {
+  dateInput.min = new Date().toISOString().split('T')[0];
+});
 
 // ── BOOKING FORMS: PUSH LEADS INTO THE CRM ──
 // In addition to the normal Netlify Forms submission, we relay the same
